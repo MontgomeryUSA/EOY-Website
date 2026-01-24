@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+<body>
+
+    <button class="back-arrow" onclick="window.location.href='index.html'">
+        <img class="back-arrow-img" src="elements/back-arrow.png" alt="back-arrow">
+    </button>
+
+    <div class="main-layout">
+        <div class="square">
+            <div class="square-layout">
+                <p class="title">Log In</p>
+                <form action="/action_page.php">
+                    <label class="labelUsername" for="idusername">Username</label>
+                    <input class-="inputUsername" type="text" id="idusername" name="username" placeholder="Username">
+
+                    <label class="labelPassword" for="idpassword">Password</label>
+                    <input class="inputPassowrd" type="text" id="idpassword" name="password" placeholder="Password">
+    
+                    <input type="submit" value="Log In">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="gradient-bg"></div>
+    <img class="lines" src="elements/lines-login.png" alt="lines-login">
+</body>
+</html>

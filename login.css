@@ -1,0 +1,152 @@
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+.gradient-bg {
+    background-color: #261b66;
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotDreamer';
+    src: url('fonts/Robot Dreamer.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'glacialIndifference';
+    src: url('fonts/GlacialIndifference-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.square {
+    width: 110vh;
+    height: 80vh;
+    border: 5px solid #A985DF;
+    border-radius: 36px;
+    background: linear-gradient(0deg, #49318f, #1f1750);
+}
+
+.main-layout {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.square-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 110vh;
+    height: 80vh;}
+
+form {
+    color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-family: glacialIndifference;
+
+}
+
+label {
+    display: block;
+    text-align: left;
+    width: 50%;
+    font-size: 4vh;
+}
+
+input[type=text], select {
+  width: 50%;
+  padding: 12px;
+  margin: 8px 0;
+  display: flex;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: left;
+  background-color: #7b6abf;
+  color: white;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+input[type="text"]:focus,
+select:focus {
+    color: white;
+    font-family: glacialIndifference;
+    outline: none;
+    box-shadow: 0 0 0 3px #5f4fa5;
+}
+
+input[type=submit] {
+    font-family: Montserrat;
+    font-weight: bold;
+    width: 15%;
+    background-color: #7b6abf;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    margin: 3vh;
+}
+
+input[type=submit]:hover {
+  background-color: #6e5faa;
+}
+
+.title {
+    margin-top: 0;
+    width: 110vh;
+    text-align: center;
+    font-size: 5vh;
+    font-family: Montserrat;
+    color: white;
+    font-weight: bolder;
+}
+
+.lines {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.back-arrow {
+    background-color: transparent;
+    border: none;
+    width: 4vh;
+    height: auto;
+    top: 3vh;
+    left: 2.5vh;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.back-arrow-img {
+    width: inherit;
+    height: inherit;
+}
