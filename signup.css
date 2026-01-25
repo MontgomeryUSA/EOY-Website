@@ -61,15 +61,19 @@ body, html {
 }
 
 .title {
-    padding-left: 22vh !important;
     font-family: robotDreamer;
-    margin: 0;
-    padding-top: 0vh;
+    margin: 0 0 2vh 0;
     color: white;
     font-weight: bolder;
     text-align: left;
     width: inherit;
     font-size: 6vh;
+    padding-bottom: 0vh;
+}
+
+.title-wrapper {
+    width: fit-content;
+    margin: 0 auto;
 }
 
 
@@ -124,7 +128,7 @@ body, html {
 .imageandrows {
     display: flex;
     flex-direction: row;
-    padding-top: 6vh;
+    padding-top: 1vh;
     padding-bottom: 2vh;
     width: auto;
 
