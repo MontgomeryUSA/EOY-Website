@@ -214,6 +214,7 @@ label {
 .classDropdown select {
     width: 40.5vh !important;
     height: 3.6vh;
+    cursor: pointer;
 }
 
 .buttonLayout {
@@ -231,6 +232,7 @@ label {
 .personDropdown select {
     width: 27.5vh !important;
     height: 3.6vh;
+    cursor: pointer;
 }
 
 

@@ -48,6 +48,18 @@
     z-index: 2;
 }
 
+.title {
+    font-family: robotDreamer;
+    font-size: 3.8vh;
+    color: white;
+    left: 5vh;
+    display: flex;
+    position: relative;
+    top: 2vh;
+    padding-left: 1.5vh;
+    margin: 0;
+}
+
 .side-panel {
     position: fixed;
     top: 0;
@@ -156,6 +168,7 @@
 
 
 
+ 
 
  
 .main-layout {
@@ -165,20 +178,6 @@
     height: 100vh;
     flex-direction: column;
     padding-top: 1vh;
-}
-
-.title {
-    font-family: robotDreamer;
-    margin: 0 0 2vh 0;
-    color: white;
-    font-weight: bolder;
-    text-align: left;
-    width: inherit;
-    font-size: 4vh;
-    padding-bottom: 0vh;
-    position: absolute;
-    top: 2vh;
-    left: 6vh;
 }
 
 .title-wrapper {
