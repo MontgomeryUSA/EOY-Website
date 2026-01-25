@@ -114,6 +114,14 @@
     margin: 2vh;
 }
 
+.logout-link {
+    position: relative; 
+    margin-top: auto; 
+    background-color: transparent; 
+    pointer-events: auto;
+    margin-bottom: 6vh;
+}
+
 .profile-image {
     display: flex;
     max-width: 15vh;
@@ -161,6 +169,7 @@
  body, html {
     padding: 0;
     margin: 0;
+    overflow: hidden;
  }
 
 
