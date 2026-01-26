@@ -132,21 +132,22 @@
                         </div>
                     </div>
 
-                    <div class="skillrow">
-                        <form class="form-row" action="/action_page.php">
+                    <div class="input-group">
 
-                            <div class="input-group">
-
-                                <div class="field">
-                                    <label class="labelTechnicalSkills" for="idTechnicalSkills">Technical Skills</label>
-                                    <textarea class="inputTechnicalSkills" type="text" id="idTechnicalSkills" name="TechnicalSkills" placeholder="Can include but not limited to: Programming (what languages?), Data Analysis, Digital Design, Marketing, Cybersecurity, etc."></textarea>
-                                </div>
-                                <div class="field">
-                                    <label class="labelSoftSkills" for="idSoftSkills">Soft Skills</label>
-                                    <textarea class="inputSoftSkills" type="text" id="idSoftSkills" name="SoftSkills" placeholder="Can include but not limited to: Strong work ethic, creativity, positive attitude, Public Speaking, etc."></textarea>
-                                </div>
+                        <div class="field">
+                            <label class="labelTechnicalSkills" for="idTechnicalSkills">Technical Skills</label>
+                            <div class="textarea-wrapper">
+                                <textarea class="inputTechnicalSkills" type="text" id="idTechnicalSkills" name="TechnicalSkills" placeholder="Can include but not limited to: Programming (what languages?), Data Analysis, Digital Design, Marketing, Cybersecurity, etc." maxlength="200"></textarea>
+                                <div class="techCharCount" id="techCharCount">0 / 200</div>
                             </div>
-                        </form>
+                        </div>
+                        <div class="field">
+                            <label class="labelSoftSkills" for="idSoftSkills">Soft Skills</label>
+                            <div class="textarea-wrapper">
+                                <textarea class="inputSoftSkills" type="text" id="idSoftSkills" name="SoftSkills" placeholder="Can include but not limited to: Strong work ethic, creativity, positive attitude, Public Speaking, etc." maxlength="200" ></textarea>
+                                <div class="softCharCount" id="softCharCount">0 / 200</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
