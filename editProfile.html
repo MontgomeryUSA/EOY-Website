@@ -23,7 +23,7 @@
         <img src="elements/pfpimage.png" alt="Profile" class="profile-image">
         <p class="name">Julian Montgomery</p>
 
-        <a class="links" href="homepage.html">Team Page</a>
+        <a class="links" href="homepage.html">Home</a>
         <a class="links" href="editProfile.html">Edit Profile</a>
         <a class="links" href="drafting.html">Drafting</a>
         <a class="links" href="allTeams.html">All Teams</a>
@@ -36,124 +36,147 @@
 
 
     <div class="main-layout">
-            <div class="centeringstuff">
-                <div class="imageandrows">
+        <div class="centeringstuff">
+            <div class="imageandrows">
 
 
-                    <div class="imageuploader" id="imageUploader">
-                        <i class="fa-solid fa-camera fa-2x"></i>
-                        <p>Click to upload</p>
-                    </div>
-                    <input type="file" id="profilePic" style="display:none" accept="image/*">
+                <div class="imageuploader" id="imageUploader">
+                    <i class="fa-solid fa-camera fa-2x"></i>
+                    <p>Click to upload</p>
+                </div>
+                <input type="file" id="profilePic" style="display:none" accept="image/*">
 
-                            
+                        
 
 
-                        <div class="rowslayout">
-                            <div class="row1">
-                                <form class="form-row" action="/action_page.php">
-                                    <div class="input-group">
-                                        <div class="field">
-                                            <label class="labelFirstName" for="idFirstName">First Name</label>
-                                            <input class="inputFirstName" type="text" id="idFirstName" name="firstName" placeholder="John">
-                                        </div>
-                                
-                                        <div class="field2">
-                                            <label class="labelLastName" for="idLastName">Last Name</label>
-                                            <input class="inputLastName" type="text" id="idLastName" name="lastName" placeholder="Smith">
-                                        </div>
+                    <div class="rowslayout">
+                        <div class="row1">
+                            <form class="form-row" action="/action_page.php">
+                                <div class="input-group">
+                                    <div class="field">
+                                        <label class="labelFirstName" for="idFirstName">First Name</label>
+                                        <input class="inputFirstName" type="text" id="idFirstName" name="firstName" placeholder="John">
                                     </div>
-                                </form>
-                            </div>
                             
+                                    <div class="field2">
+                                        <label class="labelLastName" for="idLastName">Last Name</label>
+                                        <input class="inputLastName" type="text" id="idLastName" name="lastName" placeholder="Smith">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        
 
-                            <div class="row2">
-                                <form action="/action_page.php">
-                                    <label class="labelPreferredName" for="idPreferredName">Preferred Name</label>
-                                    <input class="inputPreferredName" type="text" id="idPreferredName" name="PreferredName" placeholder="Bob">
-                                </form>
+                        <div class="row2">
+                            <form action="/action_page.php">
+                                <label class="labelPreferredName" for="idPreferredName">Preferred Name</label>
+                                <input class="inputPreferredName" type="text" id="idPreferredName" name="PreferredName" placeholder="Bob">
+                            </form>
 
-                                <div class="classDropdown" id="classContainer">
-                                    <select id="classDropdown">
-                                    <option value="">--Select a class--</option>
-                                    <option value="Math 101">CS 1</option>
-                                    <option value="History 202">AP CSA</option>
-                                    <option value="Science 303">CS 3</option>
+                            <div class="classDropdown" id="classContainer">
+                                <label class="labelclassDropdown">Class</label>
+                                <select class="placeholder-select" required id="classDropdown">
+                                <option value="">--Select a class--</option>
+                                <option value="Class">CS 1</option>
+                                <option value="Class">AP CSA</option>
+                                <option value="Class">CS 3</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row3">
+                            <form class="form-row" action="/action_page.php">
+                                <div class="input-group">
+                                    <div class="field">
+                                        <label class="labelEmail" for="idEmail">School Email</label>
+                                        <input class="inputEmail" type="text" id="idEmail" name="Email" placeholder="firstname.lastname.123@k12.friscoisd.org">
+                                    </div>
+                            
+                                    <div class="field2">
+                                        <label class="labelNumber" for="idNumber">Phone </label>
+                                        <input class="inputNumber" type="text" id="idNumber" name="Number" placeholder="###-###-####">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="row5">
+                            <form class="form-row" action="/action_page.php">
+                                <div class="input-group">
+                                    <div class="field">
+                                        <label class="labelPassword" for="idPassword">Password</label>
+                                        <input class="inputPassword" type="text" id="idPassword" name="Password" placeholder="password123">
+                                    </div>
+                            
+                                    <div class="field2">
+                                        <label class="labelConfirm" for="idConfirm">Retype Password</label>
+                                        <input class="inputConfirm" type="text" id="idConfirm" name="Confirm" placeholder="password123">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="row4">
+                                <div class="personDropdown1" id="personContainer">
+                                    <label class="labelpersonDropdown">Requested Members</label>
+                                    <select class="placeholder-select" required id="personDropdown">
+                                        <option value="">--Select a person--</option>
+                                        <option value="Person">Person 1</option>
+                                        <option value="Person">Person 2</option>
+                                        <option value="Person">Person 3</option>
                                     </select>
                                 </div>
-                            </div>
 
-                            <div class="row3">
-                                <form class="form-row" action="/action_page.php">
-                                    <div class="input-group">
-                                        <div class="field">
-                                            <label class="labelEmail" for="idEmail">School Email</label>
-                                            <input class="inputEmail" type="text" id="idEmail" name="Email" placeholder="firstname.lastname.123@k12.friscoisd.org">
-                                        </div>
-                                
-                                        <div class="field2">
-                                            <label class="labelNumber" for="idNumber">Phone </label>
-                                            <input class="inputNumber" type="text" id="idNumber" name="Number" placeholder="###-###-####">
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+                                <div class="personDropdown" id="personContainer">
+                                    <select class="placeholder-select" required id="personDropdown">
+                                    <option value="">--Select a person--</option>
+                                    <option value="Person">Person 1</option>
+                                    <option value="Person">Person 2</option>
+                                    <option value="Person">Person 3</option>
+                                    </select>
+                                </div>
 
-                            <div class="row4">
-                                    <div class="personDropdown" id="personContainer">
-                                        <select id="personDropdown">
-                                            <option value="">--Select a person--</option>
-                                            <option value="Math 101">Person 1</option>
-                                            <option value="History 202">Person 2</option>
-                                            <option value="Science 303">Person 3</option>
-                                        </select>
-                                    </div>
+                                <div class="personDropdown" id="personContainer">
+                                    <select class="placeholder-select" required id="personDropdown">
+                                    <option value="">--Select a person--</option>
+                                    <option value="Person">Person 1</option>
+                                    <option value="Person">Person 2</option>
+                                    <option value="Person">Person 3</option>
+                                    </select>
+                                </div>
 
-                                    <div class="personDropdown" id="personContainer">
-                                        <select id="personDropdown">
-                                        <option value="">--Select a person--</option>
-                                        <option value="Math 101">Person 1</option>
-                                        <option value="History 202">Person 2</option>
-                                        <option value="Science 303">Person 3</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="personDropdown" id="personContainer">
-                                        <select id="personDropdown">
-                                        <option value="">--Select a person--</option>
-                                        <option value="Math 101">Person 1</option>
-                                        <option value="History 202">Person 2</option>
-                                        <option value="Science 303">Person 3</option>
-                                        </select>
-                                    </div>
-
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="input-group">
-
-                        <div class="field">
-                            <label class="labelTechnicalSkills" for="idTechnicalSkills">Technical Skills</label>
-                            <div class="textarea-wrapper">
-                                <textarea class="inputTechnicalSkills" type="text" id="idTechnicalSkills" name="TechnicalSkills" placeholder="Can include but not limited to: Programming (what languages?), Data Analysis, Digital Design, Marketing, Cybersecurity, etc." maxlength="200"></textarea>
-                                <div class="techCharCount" id="techCharCount">0 / 200</div>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="labelSoftSkills" for="idSoftSkills">Soft Skills</label>
-                            <div class="textarea-wrapper">
-                                <textarea class="inputSoftSkills" type="text" id="idSoftSkills" name="SoftSkills" placeholder="Can include but not limited to: Strong work ethic, creativity, positive attitude, Public Speaking, etc." maxlength="200" ></textarea>
-                                <div class="softCharCount" id="softCharCount">0 / 200</div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
 
-            <div class="buttonLayout">
-                <button onclick="" class="saveButton">Save</button>
+                <div class="skillrow">
+                    <form class="form-row" action="/action_page.php">
+
+                        <div class="input-group">
+
+                            <div class="field">
+                                <label class="labelTechnicalSkills" for="idTechnicalSkills">Technical Skills</label>
+                                <div class="textarea-wrapper">
+                                    <textarea class="inputTechnicalSkills" type="text" id="idTechnicalSkills" name="TechnicalSkills" placeholder="Can include but not limited to: Programming (what languages?), Data Analysis, Digital Design, Marketing, Cybersecurity, etc." maxlength="200"></textarea>
+                                    <div class="techCharCount" id="techCharCount">0 / 200</div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="labelSoftSkills" for="idSoftSkills">Soft Skills</label>
+                                <div class="textarea-wrapper">
+                                    <textarea class="inputSoftSkills" type="text" id="idSoftSkills" name="SoftSkills" placeholder="Can include but not limited to: Strong work ethic, creativity, positive attitude, Public Speaking, etc." maxlength="200" ></textarea>
+                                    <div class="softCharCount" id="softCharCount">0 / 200</div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
+        <div class="buttonLayout">
+            <button onclick="" class="saveButton">Save</button>
+        </div>
+    </div>
 
 
     <img class="lines" src="elements/profile-lines.png" alt="lines-homepage">

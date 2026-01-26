@@ -56,11 +56,12 @@
                                 </form>
 
                                 <div class="classDropdown" id="classContainer">
-                                    <select id="classDropdown">
+                                    <label class="labelclassDropdown">Class</label>
+                                    <select class="placeholder-select" required id="classDropdown">
                                     <option value="">--Select a class--</option>
-                                    <option value="Math 101">CS 1</option>
-                                    <option value="History 202">AP CSA</option>
-                                    <option value="Science 303">CS 3</option>
+                                    <option value="Class">CS 1</option>
+                                    <option value="Class">AP CSA</option>
+                                    <option value="Class">CS 3</option>
                                     </select>
                                 </div>
                             </div>
@@ -81,31 +82,48 @@
                                 </form>
                             </div>
 
+                            <div class="row5">
+                                <form class="form-row" action="/action_page.php">
+                                    <div class="input-group">
+                                        <div class="field">
+                                            <label class="labelPassword" for="idPassword">Password</label>
+                                            <input class="inputPassword" type="text" id="idPassword" name="Password" placeholder="password123">
+                                        </div>
+                                
+                                        <div class="field2">
+                                            <label class="labelConfirm" for="idConfirm">Retype Password</label>
+                                            <input class="inputConfirm" type="text" id="idConfirm" name="Confirm" placeholder="password123">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
                             <div class="row4">
-                                    <div class="personDropdown" id="personContainer">
-                                        <select id="personDropdown">
+                                    <div class="personDropdown1" id="personContainer">
+                                        <label class="labelpersonDropdown">Requested Members</label>
+                                        <select class="placeholder-select" required id="personDropdown">
                                             <option value="">--Select a person--</option>
-                                            <option value="Math 101">Person 1</option>
-                                            <option value="History 202">Person 2</option>
-                                            <option value="Science 303">Person 3</option>
+                                            <option value="Person">Person 1</option>
+                                            <option value="Person">Person 2</option>
+                                            <option value="Person">Person 3</option>
                                         </select>
                                     </div>
 
                                     <div class="personDropdown" id="personContainer">
-                                        <select id="personDropdown">
+                                        <select class="placeholder-select" required id="personDropdown">
                                         <option value="">--Select a person--</option>
-                                        <option value="Math 101">Person 1</option>
-                                        <option value="History 202">Person 2</option>
-                                        <option value="Science 303">Person 3</option>
+                                        <option value="Person">Person 1</option>
+                                        <option value="Person">Person 2</option>
+                                        <option value="Person">Person 3</option>
                                         </select>
                                     </div>
 
                                     <div class="personDropdown" id="personContainer">
-                                        <select id="personDropdown">
+                                        <select class="placeholder-select" required id="personDropdown">
                                         <option value="">--Select a person--</option>
-                                        <option value="Math 101">Person 1</option>
-                                        <option value="History 202">Person 2</option>
-                                        <option value="Science 303">Person 3</option>
+                                        <option value="Person">Person 1</option>
+                                        <option value="Person">Person 2</option>
+                                        <option value="Person">Person 3</option>
                                         </select>
                                     </div>
 

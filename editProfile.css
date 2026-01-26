@@ -257,14 +257,14 @@
 .row1 {
     display: flex;
     flex-direction: row !important;
-    padding-bottom: 3vh;
+    padding-bottom: 2vh;
     padding-left: 7vh;
 }
 
 .row2 {
     display: flex;
     flex-direction: row;
-    padding-bottom: 3vh;
+    padding-bottom: 2vh;
     padding-left: 7vh;
 }
 
@@ -272,7 +272,7 @@
     padding-left: 7vh;
     display: flex;
     flex-direction: row;
-    padding-bottom: 4vh;
+    padding-bottom: 2vh;
     gap: 2vh;
 }
 
@@ -281,8 +281,15 @@
     display: flex;
     flex-direction: row;
     gap: 2vh;
+    padding-bottom: 2vh;
 }
 
+.row5 {
+    display: flex;
+    flex-direction: row !important;
+    padding-bottom: 2vh;
+    padding-left: 7vh;
+}
 
 .skillrow {
     display: flex;
@@ -304,6 +311,7 @@
 .field {
     display: flex;
     flex-direction: column;
+    width: fit-content;
 }
  
 
@@ -315,7 +323,7 @@
 
 
 label {
-    margin-bottom: 5px; 
+    margin-bottom: 0; 
     font-family: Montserrat;
     color: white;
     font-size: 2vh;
@@ -327,12 +335,14 @@ label {
 
 .classDropdown {
     padding-left: 6vh;
-    padding-top: 2.5vh;
+    padding-top: 0vh;
     align-self: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .classDropdown select {
-    width: 40.5vh !important;
+    width: 40vh !important;
     height: 3.6vh;
     cursor: pointer;
 }
@@ -346,15 +356,28 @@ label {
 .personDropdown {
     padding-left: 0vh;
     align-self: center;
+    padding-top: 2.5vh;
+}
+
+.personDropdown1 {
+    padding-left: 0vh;
+    align-self: center;
     padding-top: 0.5vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .personDropdown select {
-    width: 27.5vh !important;
+    width: 27.2vh !important;
     height: 3.6vh;
     cursor: pointer;
 }
 
+.personDropdown1 select {
+    width: 27.2vh !important;
+    height: 3.6vh;
+    cursor: pointer;
+}
 
 .saveButton {
     width: 12vh;
@@ -381,6 +404,14 @@ input[type=text], select {
 }
 
 
+.placeholder-select {
+    color: #999;
+}
+
+.placeholder-select:valid {
+    color: white;
+}
+
 
 .inputTechnicalSkills, .inputSoftSkills {
     width: 80vh !important;
@@ -393,6 +424,7 @@ input[type=text], select {
     color: white;
     border: none;
     resize: none;
+    border-radius: 5px;
 }
 
 .centeringstuff {
@@ -423,4 +455,8 @@ input[type=text], select {
 .inputTechnicalSkills,
 .inputSoftSkills {
     padding-bottom: 30px;
+}
+
+.labelTechnicalSkills, .labelSoftSkills {
+    margin: 8px 0;
 }
