@@ -1,8 +1,10 @@
 .gradient-bg {
     background: linear-gradient(0deg, #147084, #0F1E30);
-    position: absolute;
+    position: fixed;
     inset: 0;
-    z-index: -3;
+    z-index: 0;
+    min-height: 100%;
+    pointer-events: none;
 }
 
 @font-face {
@@ -27,12 +29,13 @@
 }
 
 .lines {
-    z-index: -1;
-    position: absolute;
+    z-index: 0;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
+    pointer-events: none;
 }
 
 
@@ -58,7 +61,7 @@
     width: 25vh;
     height: 100vh;
     background: linear-gradient(0deg, #147084, #0F1E30);
-    z-index: 3;
+    z-index: 6;
 
     transform: translateX(-100%);
     transition: transform 0.3s ease;
@@ -139,12 +142,10 @@
     transition: opacity 0.3s ease;*/
     opacity: 0.65;
     position: absolute;
-    z-index: 2;
+    z-index: 4;
 
     transform: translateX(-100%);
     transition: transform 0.5s ease;
-
-
  }
 
  .overlay.show {
@@ -159,6 +160,9 @@
  body, html {
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
+    background: linear-gradient(180deg, #147084, #0F1E30);
+    height: 100vh;
  }
 
 
@@ -180,6 +184,7 @@
     justify-content: center;
     align-items: center;
     top: 5vh;
+    z-index: 2;
 }
 
 
@@ -200,6 +205,7 @@
     margin: 6vh auto 0 auto;
     justify-content: center;
     position: relative;
+    padding-bottom: 4vh;
 }
 
 

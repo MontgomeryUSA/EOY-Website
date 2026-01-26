@@ -2,7 +2,8 @@
     background: linear-gradient(0deg, #147084, #0F1E30);
     position: absolute;
     inset: 0;
-    z-index: -3;
+    z-index: 0;
+    pointer-events: none;
 }
 
 @font-face {
@@ -27,12 +28,13 @@
 }
 
 .lines {
-    z-index: -1;
+    z-index: 0;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
+    pointer-events: none;
 }
 
 .openMenuButton {
@@ -68,7 +70,7 @@
     width: 25vh;
     height: 100vh;
     background: linear-gradient(0deg, #147084, #0F1E30);
-    z-index: 3;
+    z-index: 6;
 
     transform: translateX(-100%);
     transition: transform 0.3s ease;
@@ -149,7 +151,7 @@
     transition: opacity 0.3s ease;*/
     opacity: 0.65;
     position: absolute;
-    z-index: 2;
+    z-index: 4;
 
     transform: translateX(-100%);
     transition: transform 0.5s ease;
@@ -167,8 +169,12 @@
   }
 
  body, html {
+    overflow-x: hidden;
     padding: 0;
     margin: 0;
+    background: linear-gradient(180deg, #147084, #0F1E30);
+    height: 100vh;
+    width: 100%;
  }
 
 
@@ -204,6 +210,8 @@
     gap: 10vh;
     top: 8vh;
     left: 6vh;
+    max-width: 92%;
+    z-index: 2;
  }
 
  .blockTitle {

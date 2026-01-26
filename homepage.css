@@ -1,9 +1,19 @@
 .gradient-bg {
     background: linear-gradient(0deg, #150F34, #49318f);
+    pointer-events: none;
     position: absolute;
     inset: 0;
-    z-index: -3;
+    z-index: 0;
 }
+
+body, html {
+    overflow-x: hidden;
+    background: linear-gradient(180deg, #150F34, #49318f);
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+ }
 
 @font-face {
     font-family: 'Montserrat';
@@ -27,7 +37,8 @@
 }
 
 .lines {
-    z-index: -1;
+    z-index: 0;
+    pointer-events: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -164,9 +175,4 @@
     transform: translateX(0);
 
     /*opacity: 0.65;*/
-  }
-
- body, html {
-    padding: 0;
-    margin: 0;
- }
+}

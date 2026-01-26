@@ -2,7 +2,8 @@
     background: linear-gradient(0deg, #185CAD, #17304D);
     position: absolute;
     inset: 0;
-    z-index: -3;
+    z-index: 0;
+    pointer-events: none;
 }
 
 @font-face {
@@ -27,12 +28,13 @@
 }
 
 .lines {
-    z-index: -1;
+    z-index: 0;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
+    pointer-events: none;
 }
 
 .openMenuButton {
@@ -169,4 +171,7 @@
  body, html {
     padding: 0;
     margin: 0;
+    background: linear-gradient(180deg, #185CAD, #17304D);
+    height: 100vh;
+    overflow-x: hidden;
  }
