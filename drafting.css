@@ -175,3 +175,60 @@
     height: 100vh;
     overflow-x: hidden;
  }
+
+
+
+
+
+ .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    display: grid;
+    position: relative;
+    top: 9vh;
+    left: 5vh;
+    gap: 8.5vh;
+    max-width: 90%;
+    z-index: 2;
+    padding: 2vh;
+ }
+
+ .profileBlock {
+    background-color: #9BADFF;
+    border-radius: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 20vh;
+    max-height: 20vh;
+    width: 25vh;
+    max-width: 25vh;
+    text-align: center;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.profileBlock:hover {
+    opacity: 1;
+}
+
+ .profileImage {
+    width: 10vh;
+    height: auto;
+    border-radius: 50%;
+}
+
+ .name {
+    margin-top: 1vh;
+    padding: 0;
+    margin-bottom: 0.5vh;
+    font-weight: 700;
+    font-family: glacialIndifference;
+}
+
+.class {
+    margin: 0;
+    padding: 0;
+    font-family: glacialIndifference;
+}
