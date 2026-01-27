@@ -1,0 +1,230 @@
+.gradient-bg {
+    background: linear-gradient(0deg, #144784, #0F1E30);
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotDreamer';
+    src: url('fonts/Robot Dreamer.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'glacialIndifference';
+    src: url('fonts/GlacialIndifference-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.lines {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.openMenuButton {
+    background-color: transparent;
+    color: white;
+    font-size: 4.2vh;
+    border: none;
+    cursor: pointer;
+    font-family: Montserrat;
+    position: absolute;
+    top: 1vh;
+    left: 1vh;
+    z-index: 2;
+}
+
+.title {
+    font-family: robotDreamer;
+    font-size: 3.8vh;
+    color: white;
+    left: 5vh;
+    display: flex;
+    position: relative;
+    top: 2vh;
+    padding-left: 1.5vh;
+    margin: 0;
+}
+
+.side-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-right: 2px solid white;
+    width: 25vh;
+    height: 100vh;
+    background: linear-gradient(0deg, #185CAD, #17304D);
+    z-index: 3;
+
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+
+    padding: 4vh 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.side-panel.open {
+    transform: translateX(0);
+}
+
+.closeButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 1vh;
+    top: 0.5vh;
+    font-size: 2vh;
+    font-family: glacialIndifference;
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    font-size: 2vh;
+    text-align: center;
+    max-width: 15vh;
+    min-width: 15vh;
+    justify-content: center;
+    color: white;
+    font-family: Montserrat;
+    text-decoration: none;
+    position: relative;
+    padding: 1.5vh 2vh;
+    background-color: #76A5F1;
+    border-radius: 9px;
+    margin: 2vh;
+}
+
+.logout-link {
+    position: relative; 
+    margin-top: auto; 
+    background-color: transparent; 
+    pointer-events: auto;
+    margin-bottom: 6vh;
+}
+
+.profile-image {
+    display: flex;
+    max-width: 15vh;
+    max-height: 15vh;
+    border-radius: 50%;
+}
+
+.name {
+    margin-bottom: 4vh;
+    font-size: 2vh;
+    color: white;
+    font-family: Montserrat;
+}
+
+.closeButtonImage {
+    width: 2vh;
+    margin-top: 1vh;
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(0deg, #185CAD, #17304D);
+    /*opacity: 0;
+    transition: opacity 0.3s ease;*/
+    opacity: 0.65;
+    position: absolute;
+    z-index: 2;
+
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+
+
+ }
+
+ .overlay.show {
+    pointer-events: auto;
+    display: block;
+
+    transform: translateX(0);
+
+    /*opacity: 0.65;*/
+  }
+
+ body, html {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(180deg, #185CAD, #17304D);
+    height: 100vh;
+    overflow-x: hidden;
+ }
+
+
+ .class {
+    position: fixed;
+    font-family: robotDreamer;
+    font-size: 3.8vh;
+    color: white;
+    left: 5vh;
+    display: flex;
+    top: 2vh;
+    padding-left: 1.5vh;
+    margin: 0;
+}
+
+
+.firstrow {
+    z-index: 4;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+}
+
+.userProfile {
+    width: 60vh;
+    z-index: 3;
+    border-radius: 26px;
+    position: relative;
+}
+
+.nameCard {
+    z-index: 2;
+    font-size: 8vh;
+    font-family: robotDreamer;
+    margin: 0;
+}
+
+.email {
+    font-family: Montserrat;
+}
+
+.rightColumn {
+    z-index: 2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
