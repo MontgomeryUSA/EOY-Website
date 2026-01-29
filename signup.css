@@ -235,9 +235,11 @@ label {
 }
 
 .personDropdown {
-    padding-left: 0dvh;
+    margin-left: 0dvh;
     align-self: center;
-    padding-top: 2.5dvh;
+    margin-bottom: 0;
+    margin-top: auto;
+    padding: 0;
 }
 
 .personDropdown1 {
@@ -246,6 +248,7 @@ label {
     padding-top: 0.5dvh;
     display: flex;
     flex-direction: column;
+    padding: 0;
 }
 
 .personDropdown select {
