@@ -34,7 +34,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     pointer-events: none;
 }
 
@@ -43,13 +43,13 @@
 .openMenuButton {
     background-color: transparent;
     color: white;
-    font-size: 4.2vh;
+    font-size: 4.2dvh;
     border: none;
     cursor: pointer;
     font-family: Montserrat;
     position: absolute;
-    top: 1vh;
-    left: 1vh;
+    top: 1dvh;
+    left: 1dvh;
     z-index: 2;
 }
 
@@ -58,15 +58,15 @@
     top: 0;
     left: 0;
     border-right: 2px solid white;
-    width: 25vh;
-    height: 100vh;
+    width: 25dvh;
+    height: 100dvh;
     background: linear-gradient(0deg, #147084, #0F1E30);
     z-index: 6;
 
     transform: translateX(-100%);
     transition: transform 0.3s ease;
 
-    padding: 4vh 2vh;
+    padding: 4dvh 2dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,28 +83,28 @@
     cursor: pointer;
     color: white;
     position: absolute;
-    right: 1vh;
-    top: 0.5vh;
-    font-size: 2vh;
+    right: 1dvh;
+    top: 0.5dvh;
+    font-size: 2dvh;
     font-family: glacialIndifference;
     font-weight: bold;
 }
 
 .links {
     display: flex;
-    font-size: 2vh;
+    font-size: 2dvh;
     text-align: center;
-    max-width: 15vh;
-    min-width: 15vh;
+    max-width: 15dvh;
+    min-width: 15dvh;
     justify-content: center;
     color: white;
     font-family: Montserrat;
     text-decoration: none;
     position: relative;
-    padding: 1.5vh 2vh;
+    padding: 1.5dvh 2dvh;
     background-color: #2C656B;
     border-radius: 9px;
-    margin: 2vh;
+    margin: 2dvh;
 }
 
 .logout-link {
@@ -112,31 +112,31 @@
     margin-top: auto; 
     background-color: transparent; 
     pointer-events: auto;
-    margin-bottom: 6vh;
+    margin-bottom: 6dvh;
 }
 
 .profile-image {
     display: flex;
-    max-width: 15vh;
-    max-height: 15vh;
+    max-width: 15dvh;
+    max-height: 15dvh;
     border-radius: 50%;
 }
 
 .name {
-    margin-bottom: 4vh;
-    font-size: 2vh;
+    margin-bottom: 4dvh;
+    font-size: 2dvh;
     color: white;
     font-family: Montserrat;
 }
 
 .closeButtonImage {
-    width: 2vh;
-    margin-top: 1vh;
+    width: 2dvh;
+    margin-top: 1dvh;
 }
 
 .overlay {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     background: linear-gradient(0deg, #147084, #0F1E30);
     /*opacity: 0;
     transition: opacity 0.3s ease;*/
@@ -162,7 +162,7 @@
     margin: 0;
     overflow-x: hidden;
     background: linear-gradient(180deg, #147084, #0F1E30);
-    height: 100vh;
+    height: 100dvh;
  }
 
 
@@ -173,7 +173,7 @@
 
  .title {
     font-family: robotDreamer;
-    font-size: 7vh;
+    font-size: 7dvh;
     color: white;
     font-weight: bolder;
     display: flex;
@@ -187,18 +187,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 130vh;
+    max-width: 130dvh;
 }
 
 .first-row {
     display: flex;
     justify-content: center;
-    margin-top: 4vh;
+    margin-top: 4dvh;
     flex-direction: row;
-    gap: 4.5vh;
+    gap: 4.5dvh;
     width: 100%;
     flex-wrap: wrap;
-    margin-bottom: 5vh;
+    margin-bottom: 5dvh;
 }
 
 
@@ -208,26 +208,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 5vh;
+    top: 5dvh;
     z-index: 2;
 }
 
 
  .leaderBlock {
     background-color: #2C656B;
-    width: 45vh;
-    height: 35vh;
+    width: 45dvh;
+    height: 35dvh;
     border-radius: 26px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2vh;
+    padding: 2dvh;
     cursor: pointer;
  }
 
  .leaderProfile {
-    width: 25vh;
+    width: 25dvh;
     height: auto;
     border-radius: 50%;
  }
@@ -235,33 +235,33 @@
  .leaderName {
     color: white;
     font-family: Montserrat;
-    font-size: 2vh;
+    font-size: 2dvh;
     padding: 0;
     margin: 0;
-    margin-top: 2vh;
+    margin-top: 2dvh;
  }
 
  .projectBlock {
     background-color: #2C656B;
     color: white;
     font-family: Montserrat;
-    padding: 5vh;
+    padding: 5dvh;
     border-radius: 26px;
-    width: 45vh;
-    max-height: 35vh;
+    width: 45dvh;
+    max-height: 35dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
  }
 
  .projectTitle {
-    font-size: 3vh;
+    font-size: 3dvh;
     margin: 0;
-    margin-bottom: 2vh;
+    margin-bottom: 2dvh;
  }
 
  .projectDescription {
-    font-size: 2.5vh;
+    font-size: 2.5dvh;
     margin: 0;
  }
 
@@ -270,12 +270,12 @@
     margin: 0;
     display: flex;
     flex-direction: row;
-    gap: 5vh;
+    gap: 5dvh;
     width: max-content;
  }
 
  .memberProfile {
-    max-width: 13vh;
+    max-width: 13dvh;
     height: auto;
     border-radius: 50%;
     padding: 0;
@@ -288,10 +288,10 @@
     opacity: 0.7;
     color: white;
     font-family: Montserrat;
-    padding: 5vh;
+    padding: 5dvh;
     border-radius: 26px;
-    width: 14vh;
-    max-height: 14vh;
+    width: 14dvh;
+    max-height: 14dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;

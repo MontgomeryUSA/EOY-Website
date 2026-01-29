@@ -32,8 +32,8 @@ body, html {
 }
 
 .square {
-    width: 110vh;
-    height: 80vh;
+    width: 110dvh;
+    height: 80dvh;
     border: 5px solid #A985DF;
     border-radius: 36px;
     background: linear-gradient(0deg, #49318f, #1f1750);
@@ -42,7 +42,7 @@ body, html {
 .main-layout {
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     justify-content: center;
     align-items: center;
 }
@@ -51,8 +51,8 @@ body, html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 110vh;
-    height: 80vh;}
+    width: 110dvh;
+    height: 80dvh;}
 
 form {
     color: white;
@@ -68,7 +68,7 @@ label {
     display: block;
     text-align: left;
     width: 50%;
-    font-size: 4vh;
+    font-size: 4dvh;
 }
 
 input[type=text], select {
@@ -108,7 +108,7 @@ input[type=submit] {
     border: none;
     border-radius: 14px;
     cursor: pointer;
-    margin: 3vh;
+    margin: 3dvh;
 }
 
 input[type=submit]:hover {
@@ -117,9 +117,9 @@ input[type=submit]:hover {
 
 .title {
     margin-top: 0;
-    width: 110vh;
+    width: 110dvh;
     text-align: center;
-    font-size: 5vh;
+    font-size: 5dvh;
     font-family: Montserrat;
     color: white;
     font-weight: bolder;
@@ -131,16 +131,16 @@ input[type=submit]:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
 }
 
 .back-arrow {
     background-color: transparent;
     border: none;
-    width: 4vh;
+    width: 4dvh;
     height: auto;
-    top: 3vh;
-    left: 2.5vh;
+    top: 3dvh;
+    left: 2.5dvh;
     position: absolute;
     z-index: 1;
     cursor: pointer;
