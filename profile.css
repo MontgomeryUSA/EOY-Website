@@ -268,10 +268,9 @@
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding-left: 20dvh;
     padding-right: 20dvh;
-    margin-bottom: 0dvh;
+    padding-bottom: 50dvh;
 }
 
 .phoneNumberLabel {
