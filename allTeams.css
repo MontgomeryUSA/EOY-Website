@@ -27,39 +27,45 @@
     font-style: normal;
 }
 
+.header {
+    width: 100%;
+    padding-top: 1dvh;
+    padding-left: 1dvh;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+}
+
 .lines {
     z-index: 0;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     pointer-events: none;
 }
 
 .openMenuButton {
     background-color: transparent;
     color: white;
-    font-size: 4.2vh;
+    font-size: 4.2dvh;
     border: none;
     cursor: pointer;
     font-family: Montserrat;
-    position: absolute;
-    top: 1vh;
-    left: 1vh;
     z-index: 2;
+    padding-left: 1dvh;
+    padding-right: 1dvh;
 }
 
 .title {
     font-family: robotDreamer;
-    font-size: 3.8vh;
+    font-size: 4dvh;
     color: white;
-    left: 5vh;
     display: flex;
-    position: relative;
-    top: 2vh;
-    padding-left: 1.5vh;
     margin: 0;
+    z-index: 2;
+    padding-top: 0.7dvh;
 }
 
 .side-panel {
@@ -67,15 +73,15 @@
     top: 0;
     left: 0;
     border-right: 2px solid white;
-    width: 25vh;
-    height: 100vh;
+    width: 25dvh;
+    height: 100dvh;
     background: linear-gradient(0deg, #147084, #0F1E30);
     z-index: 6;
 
     transform: translateX(-100%);
     transition: transform 0.3s ease;
 
-    padding: 4vh 2vh;
+    padding: 4dvh 2dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,28 +98,28 @@
     cursor: pointer;
     color: white;
     position: absolute;
-    right: 1vh;
-    top: 0.5vh;
-    font-size: 2vh;
+    right: 1dvh;
+    top: 0.5dvh;
+    font-size: 2dvh;
     font-family: glacialIndifference;
     font-weight: bold;
 }
 
 .links {
     display: flex;
-    font-size: 2vh;
+    font-size: 2dvh;
     text-align: center;
-    max-width: 15vh;
-    min-width: 15vh;
+    max-width: 15dvh;
+    min-width: 15dvh;
     justify-content: center;
     color: white;
     font-family: Montserrat;
     text-decoration: none;
     position: relative;
-    padding: 1.5vh 2vh;
+    padding: 1.5dvh 2dvh;
     background-color: #2C656B;
     border-radius: 9px;
-    margin: 2vh;
+    margin: 2dvh;
 }
 
 .logout-link {
@@ -121,31 +127,31 @@
     margin-top: auto; 
     background-color: transparent; 
     pointer-events: auto;
-    margin-bottom: 6vh;
+    margin-bottom: 6dvh;
 }
 
 .profile-image {
     display: flex;
-    max-width: 15vh;
-    max-height: 15vh;
+    max-width: 15dvh;
+    max-height: 15dvh;
     border-radius: 50%;
 }
 
 .name {
-    margin-bottom: 4vh;
-    font-size: 2vh;
+    margin-bottom: 4dvh;
+    font-size: 2dvh;
     color: white;
     font-family: Montserrat;
 }
 
 .closeButtonImage {
-    width: 2vh;
-    margin-top: 1vh;
+    width: 2dvh;
+    margin-top: 1dvh;
 }
 
 .overlay {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     background: linear-gradient(0deg, #147084, #0F1E30);
     /*opacity: 0;
     transition: opacity 0.3s ease;*/
@@ -173,7 +179,7 @@
     padding: 0;
     margin: 0;
     background: linear-gradient(180deg, #147084, #0F1E30);
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
  }
 
@@ -185,8 +191,8 @@
     opacity: 0.65;
     background-color: #2C656B;
     color: white;
-    width: 25vh;
-    height: 15vh;
+    width: 25dvh;
+    height: 15dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -207,18 +213,18 @@
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     display: grid;
     position: relative;
-    gap: 10vh;
-    top: 8vh;
-    left: 6vh;
+    gap: 10dvh;
+    top: 8dvh;
+    left: 6dvh;
     max-width: 92%;
     z-index: 2;
  }
 
  .blockTitle {
     font-weight: bold;
-    padding-bottom: 0vh;
+    padding-bottom: 0dvh;
     text-decoration: underline;
-    margin-bottom: 0.5vh;
+    margin-bottom: 0.5dvh;
     cursor: text;
  }
 

@@ -8,7 +8,10 @@
 </head>
 <body>
     <div class="gradient-bg"></div>
-    <button class="openMenuButton" onclick="openMenu()">&#9776;</button>
+    <div class="header">
+        <button class="openMenuButton" onclick="openMenu()">&#9776;</button>
+        <p class="title">DRAFTING - CS1 STUDENTS ONLY</p>
+    </div>
 
     <div class="overlay" id="overlay"></div>
 
@@ -30,8 +33,6 @@
         <a class="links logout-link" href="#">Log Out</a>
     </div>
 
-    <p class="title">DRAFTING - CS1 STUDENTS ONLY</p>
-
     <div class = "grid">
         <div class="profileBlock">
             <img src="elements/profileImage.png" alt="profileImage" class="profileImage">
@@ -39,8 +40,8 @@
             <p class="class">AP CSA</p>
         </div>
 
-        <div class="profileBlock">
-            <img src="elements/profileImage.png" alt="profileImage" class="profileImage" onclick="window.location.href='profile.html'">
+        <div class="profileBlock" onclick="window.location.href='profile.html'">
+            <img src="elements/profileImage.png" alt="profileImage" class="profileImage">
             <p class="name">Julian Montgomery</p>
             <p class="class">CS 3</p>
         </div>
