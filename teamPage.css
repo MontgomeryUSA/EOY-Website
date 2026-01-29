@@ -275,7 +275,7 @@
  }
 
  .memberProfile {
-    width: 13vh;
+    max-width: 13vh;
     height: auto;
     border-radius: 50%;
     padding: 0;
