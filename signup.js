@@ -69,22 +69,13 @@ subBtn?.addEventListener('click', async () => {
       api.setTkn(res.tkn, res.uid);
 
       if (imgFile) {
-        try {
-          const fd = new FormData();
-          fd.append('pic', imgFile);
-          const picRes = await fetch('https://eoyapi.monty.my/api/usr/profile/pic', {
-            method: 'POST',
-            headers: { Authorization: `Bearer ${res.tkn}` },
-            body: fd
-          });
-          
-          if (!picRes.ok) {
-            console.error('Profile pic upload failed:', await picRes.text());
-          }
-        } catch (picErr) {
-          console.error('Profile pic upload error:', picErr);
-          // Continue anyway - account is created
-        }
+        const fd = new FormData();
+        fd.append('pic', imgFile);
+        await fetch('https://eoyapi.monty.my/api/usr/profile/pic', {
+          method: 'POST',
+          headers: { Authorization: `Bearer ${res.tkn}` },
+          body: fd
+        });
       }
 
       window.location.href = 'homepage.html';

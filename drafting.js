@@ -34,7 +34,7 @@ async function loadCurrUsr() {
       if (nm) nm.textContent = `${currUsr.pn || currUsr.fn} ${currUsr.ln}`;
       
       const img = document.querySelector('.side-panel .profile-image');
-      if (img && currUsr.pp) img.src = `http://localhost:3000${currUsr.pp}`;
+      if (img && currUsr.pp) img.src = `https://eoyapi.monty.my${currUsr.pp}`;
       
       // Load all users for drafting
       loadAllUsrs();
@@ -74,7 +74,7 @@ function renderUsrs(usrs) {
     const img = document.createElement('img');
     img.className = 'profileImage';
     img.alt = 'profileImage';
-    img.src = u.pp ? `http://localhost:3000${u.pp}` : 'elements/profileImage.png';
+    img.src = u.pp ? `https://eoyapi.monty.my${u.pp}` : 'elements/profileImage.png';
     
     const nm = document.createElement('p');
     nm.className = 'name';

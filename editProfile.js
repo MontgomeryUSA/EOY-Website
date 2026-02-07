@@ -71,7 +71,7 @@ async function loadData() {
 
       // Show profile pic
       if (u.pp) {
-        imgUpl.innerHTML = `<img src="http://localhost:3000${u.pp}" alt="Profile">`;
+        imgUpl.innerHTML = `<img src="https://eoyapi.monty.my${u.pp}" alt="Profile">`;
       }
 
       // Update sidebar
