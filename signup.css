@@ -226,6 +226,7 @@ label {
     width: 40dvh !important;
     height: 3.6dvh;
     cursor: pointer;
+    padding: 0;
 }
 
 .buttonLayout {
@@ -255,12 +256,14 @@ label {
     width: 27.2dvh !important;
     height: 3.6dvh;
     cursor: pointer;
+    padding: 0;
 }
 
 .personDropdown1 select {
     width: 27.2dvh !important;
     height: 3.6dvh;
     cursor: pointer;
+    padding: 0;
 }
 
 .submitButton {
@@ -309,6 +312,7 @@ input[type=text], select {
     border: none;
     resize: none;
     border-radius: 5px;
+    font-family: Montserrat;
 }
 
 .centeringstuff {
