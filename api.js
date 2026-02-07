@@ -25,8 +25,7 @@ const api = {
     
     const cfg = {
       method: opt.m || 'GET',
-      headers: hdrs,
-      ...opt
+      headers: hdrs
     };
     
     if (opt.body) {
