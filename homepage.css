@@ -1,10 +1,16 @@
-body, html {
-    overflow-x: hidden;
+.gradient-bg {
     background: linear-gradient(0deg, #150F34, #49318f);
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+ body, html {
     padding: 0;
     margin: 0;
+    background: linear-gradient(180deg, #150F34, #49318f);
     height: 100vh;
-    width: 100%;
+    overflow-x: hidden;
  }
 
 @font-face {
@@ -41,7 +47,8 @@ body, html {
 .lines {
     z-index: 0;
     pointer-events: none;
-    position: absolute;
+    position: fixed;
+    object-fit: cover;
     top: 0;
     left: 0;
     width: 100%;
@@ -314,9 +321,11 @@ body, html {
     display: flex;
     flex-direction: column;
     width: 30vw;
-    height: 30vw;
+    min-height: 30vw;
     border-radius: 22px;
     position: relative;
+    height: fit-content;
+    padding-bottom: 4vh;
 }
 
 .checklistTitle {
@@ -336,14 +345,35 @@ body, html {
     display: flex;
     align-items: center;
     gap: 1vh;
+    max-width: inherit;
+    display: flex;
+    align-items: flex-start;
+    padding-right: 2vh;
+    gap: 1vh;
+}
+.checklistP input[type="checkbox"] {
+  margin-top: 0.4vh;
+  display: block;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+
+.checklistP span {
+  flex: 1;
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .statusBlock {
     width: 30vw;
     background: #633C9B;
-    height: 30vw;
+    min-height: 30vw;
     border-radius: 22px;
     position: relative;
+    height: fit-content;
+    padding-bottom: 4vh;
 }
 
 .history {
@@ -368,6 +398,9 @@ body, html {
     color: white;
     font-size: 2.5vh;
     font-family: Montserrat;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    padding-right: 2vh;
 }
 
 .row {
@@ -412,4 +445,47 @@ body, html {
     accent-color: #49318f;
     width: 18px;
     height: 18px;
+}
+
+
+
+@media (max-width: 1000px){ 
+html, body { 
+    height: auto; 
+    min-height: 100dvh; 
+ }
+.pageWrapper { 
+    min-height: 100dvh; 
+    height: auto;
+}
+.section1 {
+    min-height: 100dvh; 
+    height: auto;
+    text-align: center;
+    padding-top: 0vh;
+    margin-top: 1vh;
+}
+.section2 {
+    min-height: 100dvh; 
+    height: auto;
+}
+
+.checklistTitle {
+    margin-top: 0vh;
+}
+.row {
+    flex-direction: column;
+}
+.checklistBlock {
+    min-width: 70vw;
+}
+
+.checklistTitle {
+    padding-left: 4vh;
+    text-align: left;
+}
+
+.statusBlock {
+    min-width: 70vw;
+}
 }
