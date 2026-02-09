@@ -83,7 +83,7 @@
     transform: translateX(0);
 }
 
-.closeButton {
+.signupButton {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -135,7 +135,7 @@
     font-family: Montserrat;
 }
 
-.closeButtonImage {
+.signupButtonImage {
     width: 2vh;
     margin-top: 1vh;
 }
