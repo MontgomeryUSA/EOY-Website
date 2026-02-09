@@ -25,11 +25,8 @@ const api = {
   
   async req(ep, opt = {}) {
     const hdrs = { 'Content-Type': 'application/json' };
-    const tkn = this.getTkn();
     
-    if (tkn && !opt.noAuth) {
-      hdrs.Authorization = `Bearer ${tkn}`;
-    }
+    // NO AUTHORIZATION HEADER - removed to fix Cloudflare tunnel issue
     
     const cfg = {
       method: opt.m || 'GET',
@@ -40,25 +37,15 @@ const api = {
       cfg.body = JSON.stringify(opt.body);
     }
     
-    console.log('API Request:', cfg.method, this.url + ep);
-    console.log('Request config:', cfg);
+    console.log('API:', cfg.method, this.url + ep);
     
     try {
       const res = await fetch(this.url + ep, cfg);
-      console.log('Response status:', res.status, res.statusText);
-      
       const dat = await res.json();
-      console.log('Response data:', dat);
-      
-      if (!dat.ok && res.status === 401) {
-        this.clr();
-        window.location.href = 'login.html';
-      }
-      
+      console.log('Response:', dat);
       return dat;
     } catch (err) {
-      console.error('Fetch error:', err);
-      console.error('URL was:', this.url + ep);
+      console.error('API Error:', err);
       throw err;
     }
   }
