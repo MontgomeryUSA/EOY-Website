@@ -1,12 +1,15 @@
-// API Configuration - Cloudflare Tunnel (prod) / local dev
+
 const api = {
   url: (() => {
-    try {
-      const h = window.location.hostname;
-      if (h === 'localhost' || h === '127.0.0.1' || h === '::1' || h === '::' || h === '') {
-        return 'http://127.0.0.1:3000/api';
-      }
-    } catch (_) {}
+    const h = window.location.hostname;
+    console.log('Detected hostname:', h);
+    
+    if (h === 'localhost' || h === '127.0.0.1') {
+      console.log('Using local API');
+      return 'http://127.0.0.1:3000/api';
+    }
+    
+    console.log('Using production API');
     return 'https://eoyapi.monty.my/api';
   })(),
   
