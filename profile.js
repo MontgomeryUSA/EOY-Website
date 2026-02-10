@@ -37,7 +37,7 @@ async function loadCurrUsr() {
       if (nm) nm.textContent = `${currUsr.pn || currUsr.fn} ${currUsr.ln}`;
       
       const img = document.querySelector('.side-panel .profile-image');
-      if (img && currUsr.pp) img.src = api.assetUrl(currUsr.pp);
+      if (img && currUsr.pp) img.src = `https://eoyapi.monty.my${currUsr.pp}`;
     }
   } catch (e) {
     console.error(e);
@@ -52,7 +52,7 @@ async function loadViewUsr() {
       
       // Update profile image
       const profImg = document.querySelector('.userProfile');
-      if (profImg) profImg.src = u.pp ? api.assetUrl(u.pp) : 'elements/userProfile.png';
+      if (profImg) profImg.src = u.pp ? `https://eoyapi.monty.my${u.pp}` : 'elements/userProfile.png';
       
       // Update name
       const nmCard = document.querySelector('.nameCard');

@@ -1,13 +1,15 @@
 const exp = require('express');
+const cors = require('cors');
 const pth = require('path');
 const fs = require('fs');
 
 const app = exp();
 const prt = 3000;
 
-// CORS is handled by Cloudflare Transform Rules
-// In local dev we still need CORS to allow the frontend to hit the API.
-
+app.use(cors({
+  origin: ['https://eoyapi.monty.my', 'http://localhost:8000', 'file://'],
+  credentials: true
+}));
 app.use(exp.json());
 app.use('/uplds', exp.static('uplds'));
 
@@ -20,11 +22,8 @@ const usrRtr = require('./rts/usr');
 
 app.use('/api/auth', authRtr);
 app.use('/api/usr', usrRtr);
-app.get('/api/health', (req, res) => {
-  res.json({ ok: true });
-});
 
-app.listen(prt, '0.0.0.0', () => {
+app.listen(prt, () => {
   console.log(`\n✅ Server running on port ${prt}\n`);
   console.log('Endpoints:');
   console.log('  POST /api/auth/register');

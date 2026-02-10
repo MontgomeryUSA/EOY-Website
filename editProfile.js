@@ -71,7 +71,7 @@ async function loadData() {
 
       // Show profile pic
       if (u.pp) {
-        imgUpl.innerHTML = `<img src="${api.assetUrl(u.pp)}" alt="Profile">`;
+        imgUpl.innerHTML = `<img src="https://eoyapi.monty.my${u.pp}" alt="Profile">`;
       }
 
       // Update sidebar
@@ -106,7 +106,7 @@ saveBtn?.addEventListener('click', async () => {
     if (newImg) {
       const fd = new FormData();
       fd.append('pic', newImg);
-      await fetch(api.assetUrl('/api/usr/profile/pic'), {
+      await fetch('https://eoyapi.monty.my/api/usr/profile/pic', {
         method: 'POST',
         headers: { Authorization: `Bearer ${api.getTkn()}` },
         body: fd

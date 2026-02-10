@@ -1,7 +1,7 @@
 // Signup functionality
 const imgUpl = document.getElementById('imageUploader');
 const imgInp = document.getElementById('profilePic');
-const subBtn = document.getElementById('signupButton') || document.querySelector('.signupButton');
+const subBtn = document.getElementById('submitButton') || document.querySelector('.submitButton');
 let imgFile = null;
 
 imgUpl?.addEventListener('click', () => imgInp.click());
@@ -71,7 +71,7 @@ subBtn?.addEventListener('click', async () => {
       if (imgFile) {
         const fd = new FormData();
         fd.append('pic', imgFile);
-        await fetch(api.url + '/usr/profile/pic', {
+        await fetch('https://eoyapi.monty.my/api/usr/profile/pic', {
           method: 'POST',
           headers: { Authorization: `Bearer ${res.tkn}` },
           body: fd
