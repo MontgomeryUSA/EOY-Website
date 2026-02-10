@@ -29,12 +29,10 @@ const api = {
   async req(ep, opt = {}) {
     const hdrs = { 'Content-Type': 'application/json' };
     
-    // NO AUTHORIZATION HEADER - removed to fix Cloudflare tunnel issue
-
     const tkn = this.getTkn();
-    if (!opt.noAuth && tkn) {
-      hdrs.Authorization = `Bearer ${tkn}`;
-    }
+      if (!opt.noAuth && tkn) {
+        hdrs.Authorization = `Bearer ${tkn}`;
+      }
     
     const cfg = {
       method: opt.m || 'GET',
