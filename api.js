@@ -1,6 +1,19 @@
-// API Configuration - Cloudflare Tunnel
+// API Configuration - Smart auto-detection
 const api = {
-  url: 'https://eoyapi.monty.my/api',
+  url: (() => {
+    const h = window.location.hostname;
+    console.log('Detected hostname:', h);
+    
+    // If running on localhost, use local backend
+    if (h === 'localhost' || h === '127.0.0.1') {
+      console.log('Using local API');
+      return 'http://127.0.0.1:3000/api';
+    }
+    
+    // Otherwise use production API
+    console.log('Using production API');
+    return 'https://eoyapi.monty.my/api';
+  })(),
   
   getTkn() {
     return localStorage.getItem('tkn');
@@ -17,30 +30,28 @@ const api = {
   
   async req(ep, opt = {}) {
     const hdrs = { 'Content-Type': 'application/json' };
-    const tkn = this.getTkn();
     
-    if (tkn && !opt.noAuth) {
-      hdrs.Authorization = `Bearer ${tkn}`;
-    }
+    // NO AUTHORIZATION HEADER - removed to fix Cloudflare tunnel issue
     
     const cfg = {
       method: opt.m || 'GET',
-      headers: hdrs,
-      ...opt
+      headers: hdrs
     };
     
     if (opt.body) {
       cfg.body = JSON.stringify(opt.body);
     }
     
-    const res = await fetch(this.url + ep, cfg);
-    const dat = await res.json();
+    console.log('API:', cfg.method, this.url + ep);
     
-    if (!dat.ok && res.status === 401) {
-      this.clr();
-      window.location.href = 'login.html';
+    try {
+      const res = await fetch(this.url + ep, cfg);
+      const dat = await res.json();
+      console.log('Response:', dat);
+      return dat;
+    } catch (err) {
+      console.error('API Error:', err);
+      throw err;
     }
-    
-    return dat;
   }
-};
+};2
