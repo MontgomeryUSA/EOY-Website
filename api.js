@@ -4,7 +4,7 @@ const api = {
     const h = window.location.hostname;
     console.log('Detected hostname:', h);
     
-    if (h === 'localhost' || h === '127.0.0.1') {
+     if (h === 'localhost' || h === '127.0.0.1') {
       console.log('Using local API');
       return 'http://127.0.0.1:3000/api';
     }
@@ -30,6 +30,11 @@ const api = {
     const hdrs = { 'Content-Type': 'application/json' };
     
     // NO AUTHORIZATION HEADER - removed to fix Cloudflare tunnel issue
+
+    const tkn = this.getTkn();
+    if (!opt.noAuth && tkn) {
+      hdrs.Authorization = `Bearer ${tkn}`;
+    }
     
     const cfg = {
       method: opt.m || 'GET',
