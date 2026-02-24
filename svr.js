@@ -7,7 +7,6 @@ const prt = Number(process.env.PORT) || 3000;
 const upldsDir = process.env.UPLDS_DIR || './uplds';
 
 app.use(cors());
-
 app.use(exp.json());
 if (!fs.existsSync(upldsDir)) {
   fs.mkdirSync(upldsDir, { recursive: true });
