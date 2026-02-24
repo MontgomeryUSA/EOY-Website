@@ -247,7 +247,7 @@ rtr.get('/:id', vrf, async (req, res) => {
   }
 });
 
-// Send member request (CS1 only)
+// Send member request (only CS1 can send; any class can be requested)
 rtr.post('/request', vrf, async (req, res) => {
   try {
     await ensureTeamInviteTbl();
