@@ -6,6 +6,11 @@ const upldsDir = process.env.UPLDS_DIR || './uplds';
 const app = exp();
 const prt = 3000;
 
+if (typeof dbModule.initDb !== 'function') {
+  throw new Error('cfg/db.js must export initDb()');
+}
+
+
 // CORS is handled by Cloudflare Transform Rules
 // In local dev we still need CORS to allow the frontend to hit the API.
 app.use(cors());
@@ -15,19 +20,15 @@ if (!fs.existsSync(upldsDir)) {
   fs.mkdirSync(upldsDir, { recursive: true });
 }
 
-if (!fs.existsSync('./uplds')) {
-  fs.mkdirSync('./uplds');
-}
-
-const { rtr: authRtr } = require('./rts/auth');
-const usrRtr = require('./rts/usr');
-const teamRtr = require('./rts/team');
+var authRtr = require('./rts/auth').rtr;
+var usrRtr = require('./rts/usr');
+var teamRtr = require('./rts/team');
 
 app.use('/api/auth', authRtr);
 app.use('/api/usr', usrRtr);
 app.use('/api/team', teamRtr);
-app.get('/api/health', (req, res) => {
-  res.json({ ok: true });
+app.get('/api/health', function(req, res) {
+  res.json({ ok: true, db: dbp, uploads: upldsDir });
 });
 
 
