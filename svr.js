@@ -27,18 +27,5 @@ app.get('/api/health', (req, res) => {
   res.json({ ok: true, db: dbp });
 });
 
-const start = async () => {
-  try {
-    await initDb();
-    app.listen(prt, '0.0.0.0', () => {
-      console.log(`\n✅ Server running on port ${prt}\n`);
-      console.log(`DB: ${dbp}`);
-      console.log(`Uploads: ${upldsDir}`);
-    });
-  } catch (e) {
-    console.error('Failed to initialize database:', e);
-    process.exit(1);
-  }
-};
 
 start();
