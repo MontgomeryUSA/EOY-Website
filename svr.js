@@ -25,7 +25,7 @@ app.use('/api/auth', authRtr);
 app.use('/api/usr', usrRtr);
 app.use('/api/team', teamRtr);
 app.get('/api/health', function(req, res) {
-  res.json({ ok: true, db: dbp, uploads: uploadsDir });
+  res.json({ ok: true, db: dbp, uploads: upldsDir });
 });
 
 
