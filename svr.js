@@ -1,10 +1,7 @@
 const exp = require('express');
 const fs = require('fs');
 const cors = require('cors');
-require('dotenv').config();
-
-const { initDb, dbp } = require('./cfg/db');
-
+const upldsDir = process.env.UPLDS_DIR || './uplds';
 const app = exp();
 const prt = Number(process.env.PORT) || 3000;
 const upldsDir = process.env.UPLDS_DIR || './uplds';
@@ -12,7 +9,9 @@ const upldsDir = process.env.UPLDS_DIR || './uplds';
 app.use(cors());
 
 app.use(exp.json());
-app.use('/uplds', exp.static(upldsDir));
+if (!fs.existsSync(upldsDir)) {
+  fs.mkdirSync(upldsDir, { recursive: true });
+}
 
 if (!fs.existsSync(upldsDir)) {
   fs.mkdirSync(upldsDir, { recursive: true });
