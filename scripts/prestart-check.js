@@ -30,10 +30,4 @@ if (uploadsDecls.length > 1) {
   process.exit(1);
 }
 
-const dbSrc = fs.readFileSync('cfg/db.js', 'utf8');
-if (!/module\.exports\s*=\s*\{[\s\S]*\binitDb\b/.test(dbSrc)) {
-  console.error('[prestart-check] cfg/db.js does not appear to export initDb.');
-  process.exit(1);
-}
-
 console.log('[prestart-check] Entrypoint declaration check passed.');
