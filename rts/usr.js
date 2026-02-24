@@ -247,7 +247,7 @@ rtr.get('/:id', vrf, async (req, res) => {
   }
 });
 
-// Send member request (CS1 only)
+// Send member request (only CS1 can send; any class can be requested)
 rtr.post('/request', vrf, async (req, res) => {
   try {
     await ensureTeamInviteTbl();
@@ -288,10 +288,6 @@ rtr.post('/request', vrf, async (req, res) => {
     if (!target) {
       return res.status(404).json({ ok: false, msg: 'Recipient not found' });
     }
-    if (target.cl !== 'CS1') {
-      return res.status(400).json({ ok: false, msg: 'Only CS1 students can be requested' });
-    }
-
     const targetTeam = await get(
       `SELECT tid
        FROM members
