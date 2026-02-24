@@ -6,28 +6,33 @@ const upldsDir = process.env.UPLDS_DIR || './uplds';
 const app = exp();
 const prt = 3000;
 
-// CORS is handled by Cloudflare Transform Rules
-// In local dev we still need CORS to allow the frontend to hit the API.
-app.use(cors());
+if (typeof dbModule.initDb !== 'function') {
+  throw new Error('cfg/db.js must export initDb()');
+}
 
+var app = exp();
+var prt = Number(process.env.PORT) || 3000;
+var uploadsDir = process.env.UPLDS_DIR || './uplds';
+
+app.use(cors());
 app.use(exp.json());
 if (!fs.existsSync(upldsDir)) {
   fs.mkdirSync(upldsDir, { recursive: true });
 }
 
-if (!fs.existsSync('./uplds')) {
-  fs.mkdirSync('./uplds');
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir, { recursive: true });
 }
 
-const { rtr: authRtr } = require('./rts/auth');
-const usrRtr = require('./rts/usr');
-const teamRtr = require('./rts/team');
+var authRtr = require('./rts/auth').rtr;
+var usrRtr = require('./rts/usr');
+var teamRtr = require('./rts/team');
 
 app.use('/api/auth', authRtr);
 app.use('/api/usr', usrRtr);
 app.use('/api/team', teamRtr);
-app.get('/api/health', (req, res) => {
-  res.json({ ok: true });
+app.get('/api/health', function(req, res) {
+  res.json({ ok: true, db: dbp, uploads: uploadsDir });
 });
 
 
